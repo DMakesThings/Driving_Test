@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A1/A2 Driving Test Flashcards</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="app-header">
+    <h1>Sát hạch A1/A2 &mdash; 250 câu hỏi</h1>
+    <div class="controls">
+      <button id="shuffleBtn" title="Shuffle">🔀 Shuffle</button>
+      <button id="resetBtn" title="Reset order">↺ Reset</button>
+      <label class="jump-label">Đi tới câu:
+        <input type="number" id="jumpInput" min="1" value="1">
+      </label>
+    </div>
+  </header>
+
+  <main>
+    <div class="progress-bar">
+      <span id="progressText">1 / 250</span>
+    </div>
+
+    <div class="card-stage">
+      <button class="nav-btn prev" id="prevBtn" aria-label="Previous">&#10094;</button>
+
+      <div class="card" id="card">
+        <div class="card-inner" id="cardInner">
+          <div class="card-face card-front" id="cardFront">
+            <div class="card-badge" id="frontBadge">Câu 1</div>
+            <div class="card-image-wrap" id="frontImageWrap"></div>
+            <div class="card-question" id="frontQuestion"></div>
+            <div class="flip-hint">Nhấn để xem đáp án &rarr;</div>
+          </div>
+          <div class="card-face card-back" id="cardBack">
+            <div class="card-badge">Các lựa chọn</div>
+            <ol class="options-list" id="optionsList"></ol>
+            <div class="flip-hint">Nhấn để quay lại câu hỏi</div>
+          </div>
+        </div>
+      </div>
+
+      <button class="nav-btn next" id="nextBtn" aria-label="Next">&#10095;</button>
+    </div>
+
+    <p class="hint-text">Click/tap thẻ để lật. Dùng phím &larr; &rarr; để chuyển câu, phím Space/Enter để lật.</p>
+  </main>
+
+  <footer>
+    <p>Nguồn câu hỏi: Saigon Driving License &mdash; A1/A Theoretical 250 Questions Test.</p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
